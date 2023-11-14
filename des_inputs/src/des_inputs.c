@@ -186,13 +186,6 @@ int main(int argc, char *argv[]) {
 				printf(
 						"\nError--> You haven't scanned your id yet or another door is unlocked at the moment.\n");
 			}
-			if (personObj.person_direction == 2) { //if outbound, this would be the last state => reset
-				personObj.person_state = WAITING_STATE;
-				myState = WAITING_STATE;
-				personObj.person_weight = 0;
-				personObj.person_id = 0;
-				personObj.person_direction = 0;
-			}
 
 		} else if ((strcmp(userInput, "grl") == 0)) {
 			if (myState == RIGHT_CLOSED_STATE) {
@@ -214,6 +207,13 @@ int main(int argc, char *argv[]) {
 				willSendMsg = true;
 			} else {
 				printf("\nError--> You need to close the door first.\n");
+			}
+			if (personObj.person_direction == 2) { //if outbound, this would be the last state => reset
+				personObj.person_state = WAITING_STATE;
+				myState = WAITING_STATE;
+				personObj.person_weight = 0;
+				personObj.person_id = 0;
+				personObj.person_direction = 0;
 			}
 		} else if ((strcmp(userInput, "exit") == 0)) {
 			myState = EXIT_STATE; // you can exit the system at any time
