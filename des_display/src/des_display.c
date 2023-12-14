@@ -1,5 +1,5 @@
 /*
- * MAYA JAFFARY - SHAUNESSEE GREEN
+ * MAYA JAFFARY
  * des_display.c
  *
  */

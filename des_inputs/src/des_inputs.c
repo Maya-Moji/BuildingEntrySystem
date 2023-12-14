@@ -1,5 +1,5 @@
 /*
- * MAYA JAFFARY - SHAUNESSEE GREEN
+ * MAYA JAFFARY
  * des_inputs.c
  *
  */
@@ -119,7 +119,7 @@ int main(int argc, char *argv[]) {
 				printf("\nError--> The DES is already in use. \n");
 			}
 		} else if ((strcmp(userInput, "ws") == 0)) {
-			if (myState == LEFT_OPEN_STATE || myState == RIGHT_OPEN_STATE) {
+			if ((myState == LEFT_OPEN_STATE && personObj.person_direction == 1) || (myState == RIGHT_OPEN_STATE && personObj.person_direction == 2)) {
 				myState = WEIGHT_SCALE_STATE;
 				// read weight from user
 				char continueLoop = '1';
