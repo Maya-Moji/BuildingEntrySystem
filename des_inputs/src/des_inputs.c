@@ -1,6 +1,14 @@
 /*
  * MAYA JAFFARY
  * des_inputs.c
+ * Prompts the user for inputs to the controller and error checks. 
+ * Stimulates all of the input events from the devices; e.g., card readers, door latches, scale.
+ * Prompts for the input (ls= left scan, rs= right scan, ws= weight scale, lo =left open,
+ * ro=right open, lc = left closed, rc = right closed , gru = guard right unlock, grl = guard
+ * right lock, gll=guard left lock, glu = guard left unlock)
+ * If the event is the lo, ro, lc, rc, glu, gll, gru, or grl, no further prompt is required.
+ * If the event is ls or rs, prompts for the person_id.
+ * If the event is ws, prompts for the weight.
  *
  */
 #include <stdio.h>
