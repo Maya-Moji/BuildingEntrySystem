@@ -1,7 +1,14 @@
 /*
  * MAYA JAFFARY
- * des_display.c
- *
+ * des_controller.c
+ * Runs in the background, 
+ * Operates the state machine for the controller,
+ * Directly maintains the persistent data and status for the controller. 
+ * Contains separate functions for the state handler for each state. 
+ * Each state handler performs the actions required for that state, sends a message to the des_display program to update the display as needed, 
+ * and then checks the exit conditions for that state. 
+ * When an exit condition is met, the state handler returns the function pointer for the next state handler. 
+ * The des_controller program prints out its process id when it first starts up.
  */
 #include <stdio.h>
 #include <stdlib.h>
