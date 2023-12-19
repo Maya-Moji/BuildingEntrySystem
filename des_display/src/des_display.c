@@ -1,6 +1,12 @@
 /*
  * MAYA JAFFARY
  * des_display.c
+ * Displays the status of the system – 
+ * which door is open/closed 
+ * if a user is waiting to enter from the left or right, etc. 
+ * The program runs in the background and prints out status information to the console each time a status update is sent to it 
+ * using a message from the des_controller program (QNX message passing). 
+ * Prints out its process id when it first starts up.
  *
  */
 #include <stdio.h>
